@@ -512,9 +512,17 @@ a:focus {
   margin-top: 45px;
 }
 
+.service_section .box .img-box {
+  overflow: hidden; /* Prevents overflow */
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  height: 100px; /* Set a fixed height for the image container */
+}
+
 .service_section .box .img-box svg {
-  width: 75px;
-  height: auto;
+  max-width: 100%; /* Ensures the SVG scales with the container */
+  max-height: 100%; /* Keeps the SVG within the set height */
   fill: #2c3e50; /* updated from #1c1c1c */
 }
 
