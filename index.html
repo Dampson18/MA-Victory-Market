@@ -649,45 +649,45 @@ a:focus {
 }
 
 /* contact section */
+/* contact section */
 .contact_section {
   position: relative;
   color: #ffffff;
+  padding: 50px 20px; /* Added padding for better spacing */
+  background-color: #34495e; /* Darker background for contrast */
 }
 
 .contact_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
 }
 
 .contact_section .contact_form-container {
   margin-top: 35px;
+  width: 100%;
+  max-width: 600px; /* Set max width for form */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the form container */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .contact_section .contact_form-container input {
   border: none;
   outline: none;
-  color: #2c3e50; /* changed to match text tone */
+  color: #2c3e50;
   height: 45px;
   width: 100%;
   margin: 15px 0;
   padding-left: 15px;
   background-color: #ffffff;
+  border-radius: 5px; /* Rounded input corners */
+  transition: border 0.3s ease; /* Transition for border on focus */
 }
 
-.contact_section .contact_form-container input::-webkit-input-placeholder {
-  color: #2c3e50;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input:-ms-input-placeholder {
-  color: #2c3e50;
-  text-transform: uppercase;
-}
-
-.contact_section .contact_form-container input::-ms-input-placeholder {
-  color: #2c3e50;
-  text-transform: uppercase;
+.contact_section .contact_form-container input:focus {
+  border: 2px solid #3498db; /* Border color on focus */
 }
 
 .contact_section .contact_form-container input::placeholder {
@@ -697,34 +697,32 @@ a:focus {
 
 .contact_section .contact_form-container input.message_input {
   height: 120px;
+  resize: none; /* Prevent resizing */
 }
 
 .contact_section .contact_form-container .btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 25px;
 }
 
 .contact_section .contact_form-container button {
   display: inline-block;
   padding: 10px 60px;
-  background-color: #3498db; /* updated from #f1db25 */
+  background-color: #3498db;
   color: #ffffff;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border: 1px solid transparent;
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded button corners */
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer; /* Pointer cursor for button */
 }
 
 .contact_section .contact_form-container button:hover {
   background-color: transparent;
-  border-color: #3498db; /* updated from #f1db25 */
-  color: #3498db; /* updated from #f1db25 */
+  border: 2px solid #3498db; /* Border color on hover */
+  color: #3498db;
 }
 
 .contact_bg_box {
@@ -735,15 +733,9 @@ a:focus {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact_bg_box .img-box {
@@ -753,6 +745,7 @@ a:focus {
 .contact_bg_box .img-box img {
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover; /* Cover to maintain aspect ratio */
 }
 
 .contact_bg_box::before {
@@ -762,8 +755,25 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(52,73,94,0.7), rgba(52,73,94,0.35)); /* gradient updated */
+  background: linear-gradient(to right, rgba(52,73,94,0.7), rgba(52,73,94,0.35));
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact_section {
+    padding: 30px 10px; /* Reduced padding for smaller screens */
+  }
+
+  .contact_section .contact_form-container {
+    padding: 15px; /* Adjust padding for smaller forms */
+  }
+
+  .contact_section .contact_form-container button {
+    padding: 10px 30px; /* Adjust button padding */
+  }
+}
+
+/* end contact section */
 
 /* end contact section */
 .team_section .box {
