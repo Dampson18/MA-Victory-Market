@@ -496,19 +496,18 @@ a:focus {
 }
 
 .service_section {
-  background-color: #34495e; /* updated from #1c1c1c */
+  background-color: #34495e; /* Background color */
 }
 
 .service_section .heading_container {
-  color: #ffffff;
+  color: #ffffff; /* Heading color */
 }
 
 .service_section .box {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Box color */
   padding: 25px 15px;
   text-align: center;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   margin-top: 45px;
 }
 
@@ -517,13 +516,15 @@ a:focus {
   display: flex;
   justify-content: center; /* Centers the image horizontally */
   align-items: center; /* Centers the image vertically */
-  height: 100px; /* Set a fixed height for the image container */
+  height: auto; /* Allow height to adjust based on content */
+  max-height: 150px; /* Set a maximum height for the image container */
 }
 
-.service_section .box .img-box svg {
-  max-width: 100%; /* Ensures the SVG scales with the container */
-  max-height: 100%; /* Keeps the SVG within the set height */
-  fill: #2c3e50; /* updated from #1c1c1c */
+.service_section .box .img-box img {
+  width: auto; /* Allows image width to adjust */
+  height: 100%; /* Sets image height to fill the container */
+  max-width: 100%; /* Ensures the image scales with the container */
+  object-fit: contain; /* Ensures the full image is visible */
 }
 
 .service_section .box .detail-box {
@@ -540,9 +541,8 @@ a:focus {
 .service_section .box .detail-box a {
   display: inline-block;
   padding: 8px 35px;
-  background-color: #3498db; /* updated from #f1db25 */
+  background-color: #3498db; /* Button color */
   color: #ffffff;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
   margin-top: 10px;
@@ -550,8 +550,8 @@ a:focus {
 
 .service_section .box .detail-box a:hover {
   background-color: transparent;
-  border-color: #3498db; /* updated from #f1db25 */
-  color: #3498db; /* updated from #f1db25 */
+  border-color: #3498db; /* Button hover border color */
+  color: #3498db; /* Button hover text color */
 }
 
 .client_section {
