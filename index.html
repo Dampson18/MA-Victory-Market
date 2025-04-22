@@ -26,11 +26,20 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
     @import url("font-awesome.min.css");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Poppins", sans-serif;
   color: #2c3e50; /* updated from #0c0c0c */
   background-color: #ecf0f1; /* updated from #ffffff */
+
 }
 
 .layout_padding {
@@ -494,6 +503,45 @@ a:focus {
   border-color: #3498db; /* updated from #f1db25 */
   color: #3498db; /* updated from #f1db25 */
 }
+
+
+
+/* Responsive Fix */
+@media screen and (max-width: 768px) {
+  .about_section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about_section .img_container,
+  .about_section .detail-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about_section .img_container .img-box {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .about_section .img_container .img-box img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  .about_section img{
+  width: 450px;
+  }
+}
+
+
 
 .service_section {
   background-color: #34495e; /* Background color */
@@ -1404,9 +1452,11 @@ a:focus {
           <div class="info_links">
             <h5>Useful Links</h5>
             <ul>
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="service.html">Services</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			  <li><a href="guard.html">Products</a></li>
             </ul>
           </div>
         </div>
@@ -1435,7 +1485,7 @@ a:focus {
               <button>Subscribe</button>
             </form>
             <div class="social_box">
-              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="mailto:kelvinfaraday15@gmail.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
               <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
               <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
               <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
