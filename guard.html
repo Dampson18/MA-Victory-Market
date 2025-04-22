@@ -269,7 +269,13 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-
+	  
+@media (max-width: 576px) {
+  .brand-text {
+    max-width: 100px; /* Adjust based on your layout */
+    font-size: 15px;
+  }
+}
 .navbar-brand span {
   font-weight: bold;
   color: #ffffff;
@@ -677,9 +683,10 @@ a:focus {
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html">
-              <span><img src="images/favicon.png" height="100" width="100">M.A. VICTORY MARKET</span>
-            </a>
+			<a class="navbar-brand d-flex align-items-center" href="index.html">
+			<img src="images/favicon.png" height="50" width="50" class="me-2">
+			<span class="brand-text text-nowrap">M.A. VICTORY MARKET</span>
+			</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
