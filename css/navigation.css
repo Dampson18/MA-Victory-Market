@@ -1,0 +1,45 @@
+/* Explicit collapse rules for the Bootstrap 4 mobile navigation. */
+@media (max-width: 991.98px) {
+  .market-nav .navbar-collapse {
+    display: none;
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .market-nav .navbar-collapse.show {
+    display: block !important;
+    padding: 14px 0 8px;
+  }
+
+  .market-nav .navbar-collapse.show .navbar-nav {
+    align-items: flex-start;
+  }
+
+  .market-nav .navbar-collapse.show .nav-link {
+    display: block;
+    padding: 9px 0 !important;
+  }
+
+  .market-nav .navbar-collapse.show .nav-cta {
+    margin: 10px 0 2px;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .market-nav .navbar-collapse {
+    display: flex !important;
+  }
+}
